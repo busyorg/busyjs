@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Busy.js</title>
+  <script src="../dist/busy.min.js"></script>
+</head>
+<body>
+
+<script>
+  // Init WebSocket client
+  var client = new busy.Client('wss://gtg.steem.house:8090');
+
+  // Get accounts
+  client.call('get_accounts', ['fabien'], function(err, result) {
+    console.log(err, result);
+  });
+</script>
+
+</body>
+</html>
