@@ -1,9 +1,8 @@
 {
   "name": "busyjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight JavaScript library for Busy",
-  "main": "dist/busy.cjs.js",
-  "browser": "dist/busy.min.js",
+  "main": "lib/busy.js",
   "dependencies": {
     "ws": "^3.3.3"
   },
@@ -13,12 +12,9 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "rollup": "^0.55.3",
-    "rollup-plugin-commonjs": "^8.3.0",
     "rollup-plugin-filesize": "^1.5.0",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-resolve": "^3.0.2",
-    "rollup-plugin-uglify": "^3.0.0",
     "uglify-es": "^3.3.10"
   },
   "scripts": {
@@ -27,7 +23,9 @@
     "test": "node test/test.js",
     "pretest": "npm run build"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": "busyorg/busyjs",
   "author": "busyorg",
   "license": "MIT",
