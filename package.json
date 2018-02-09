@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "A lightweight JavaScript library for Busy",
   "main": "dist/busy.cjs.js",
-  "module": "dist/busy.esm.js",
   "browser": "dist/busy.min.js",
   "dependencies": {
     "ws": "^3.3.3"
@@ -28,9 +27,7 @@
     "test": "node test/test.js",
     "pretest": "npm run build"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "repository": "busyorg/busyjs",
   "author": "busyorg",
   "license": "MIT",

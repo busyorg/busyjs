@@ -15,20 +15,10 @@ export default [
       file: pkg.browser,
       format: 'iife',
     },
-    plugins: [
-      resolve(),
-      commonjs(),
-      uglify({}, minify),
-      builtins(),
-      json(),
-      filesize(),
-    ],
+    plugins: [resolve(), commonjs(), uglify({}, minify), builtins(), json(), filesize()],
   },
   {
     input: 'src/main.js',
-    output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
-    ],
+    output: [{ file: pkg.main, format: 'cjs' }],
   },
 ];
