@@ -1,6 +1,6 @@
 {
   "name": "busyjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A lightweight JavaScript library for Busy",
   "main": "dist/busy.cjs.js",
   "browser": "dist/busy.min.js",
