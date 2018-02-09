@@ -1,9 +1,11 @@
+/* eslint-disable */
 let WebSocket;
 if (typeof window !== 'undefined') {
   WebSocket = window.WebSocket;
 } else {
   WebSocket = require('ws');
 }
+/* eslint-enable */
 
 const wait = (ws, cb) => {
   setTimeout(() => {
@@ -54,13 +56,13 @@ export default class Client {
   }
 
   call(method, params = [], cb) {
-    this.id++;
     this.queue[this.id] = cb;
     this.send({
       id: this.id,
-      method: 'call',
       jsonrpc: '2.0',
-      params: ['database_api', method, [params]],
+      method,
+      params,
     });
+    this.id += 1;
   }
 }
