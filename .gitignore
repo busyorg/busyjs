@@ -6,5 +6,4 @@ package-lock.json
 .idea
 .vscode
 
-lib
-es
+dist
