@@ -1,11 +1,9 @@
-/* eslint-disable */
 let WebSocket;
-if (typeof window !== 'undefined') {
+if (process.env.IS_UMD) {
   WebSocket = window.WebSocket;
 } else {
   WebSocket = require('ws');
 }
-/* eslint-enable */
 
 const wait = (ws, cb) => {
   setTimeout(() => {
@@ -19,6 +17,9 @@ const wait = (ws, cb) => {
 
 export default class Client {
   constructor(address) {
+    if (typeof address !== 'string')
+      throw new TypeError('Invalid argument: address has to be a string.');
+
     this.address = address;
     this.open = false;
     this.queue = {};
@@ -27,7 +28,7 @@ export default class Client {
 
     this.ws = new WebSocket(address);
 
-    this.ws.addEventListener('message', (data) => {
+    this.ws.addEventListener('message', data => {
       const message = JSON.parse(data.data);
       if (this.queue[message.id]) {
         this.queue[message.id](null, message.result);
@@ -64,5 +65,9 @@ export default class Client {
       params,
     });
     this.id += 1;
+  }
+
+  close() {
+    if (this.ws.readyState === 1) this.ws.close();
   }
 }
