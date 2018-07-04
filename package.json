@@ -1,10 +1,23 @@
 {
-  "name": "busyjs",
-  "version": "0.0.0",
+  "name": "@busyorg/busyjs",
+  "version": "1.0.0",
   "description": "A lightweight JavaScript library for Busy",
+  "repository": {
+    "url": "git://github.com/busyorg/busyjs.git",
+    "type": "git"
+  },
+  "license": "MIT",
   "main": "dist/busy.cjs.js",
   "module": "dist/busy.esm.js",
   "browser": "dist/busy.min.js",
+  "files": [
+    "dist"
+  ],
+    "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepare": "npm run build"
+  },
   "dependencies": {
     "ws": "^3.3.3"
   },
@@ -21,21 +34,5 @@
     "rollup-plugin-node-resolve": "^3.0.2",
     "rollup-plugin-uglify": "^3.0.0",
     "uglify-es": "^3.3.10"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "test": "node test/test.js",
-    "pretest": "npm run build"
-  },
-  "files": [
-    "dist"
-  ],
-  "repository": "busyorg/busyjs",
-  "author": "busyorg",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/busyorg/busyjs/issues"
-  },
-  "homepage": "https://github.com/busyorg/busyjs"
+  }
 }

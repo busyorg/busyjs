@@ -9,7 +9,7 @@ import pkg from './package.json';
 
 export default [
   {
-    input: 'src/main.js',
+    input: 'src/index.js',
     output: {
       name: 'busy',
       file: pkg.browser,
@@ -25,7 +25,7 @@ export default [
     ],
   },
   {
-    input: 'src/main.js',
+    input: 'src/index.js',
     output: [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'es' },

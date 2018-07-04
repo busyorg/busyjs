@@ -5,3 +5,6 @@ package-lock.json
 # Remove some common IDE working directories
 .idea
 .vscode
+
+# Builded files
+dist/
