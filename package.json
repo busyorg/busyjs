@@ -1,6 +1,6 @@
 {
-  "name": "@busyorg/busyjs",
-  "version": "1.0.1",
+  "name": "busyjs",
+  "version": "1.0.2",
   "description": "A lightweight JavaScript library for Busy",
   "repository": {
     "url": "git://github.com/busyorg/busyjs.git",
