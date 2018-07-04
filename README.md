@@ -4,12 +4,12 @@ A lightweight JavaScript library for Busy
 
 ### Install
 ```
-npm install @busyorg/busyjs --save
+npm install busyjs --save
 ```
 
 ### Usage
 ```js
-var busy = require('@busyorg/busyjs');
+var busy = require('busyjs');
 
 // Init WebSocket client
 var client = new busy.Client('wss://gtg.steem.house:8090');
@@ -26,7 +26,7 @@ You can also use Busy.js with promises by promisifying busy with
 [bluebird](https://github.com/petkaantonov/bluebird) as in:
 
 ```js
-var busy = require('@busyorg/busyjs');
+var busy = require('busyjs');
 bluebird.promisifyAll(busy.Client.prototype);
 ```
 
